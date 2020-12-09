@@ -1,4 +1,5 @@
 # VR_Final_Project
+Members: Richard Dell and Dawson Tocarcik
 
 Fixed weird camera movement when player was turning.
 Grabbing code still needs to be fixed.
