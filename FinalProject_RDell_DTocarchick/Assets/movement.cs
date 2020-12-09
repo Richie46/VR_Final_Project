@@ -53,16 +53,8 @@ public class movement : MonoBehaviour
         character.transform.Rotate(Vector3.up, mx * camSpeed);
         // Get camera rotation on X axis
         var currentRotationX = characterCamera.transform.localEulerAngles.x;
-        currentRotationX += my * camSpeed;
-        // Limiting camera movement to (-60) - (60) degrees on X axis.
-        if (currentRotationX < 180)
-        {
-            currentRotationX = Mathf.Min(currentRotationX, 60);
-        }
-        else if (currentRotationX > 180)
-        {
-            currentRotationX = Mathf.Max(currentRotationX, 300);
-        }
+        currentRotationX += -my * camSpeed;
+ 
         // Assign new camera rotation
         characterCamera.transform.localEulerAngles = new Vector3(currentRotationX, 0, 0);
     }
