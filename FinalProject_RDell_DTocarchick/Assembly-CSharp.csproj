@@ -63,9 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PickableItem.cs" />
-    <Compile Include="Assets\SimpleGrabSystem.cs" />
     <Compile Include="Assets\movement.cs" />
+    <Compile Include="Assets\pickup.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
