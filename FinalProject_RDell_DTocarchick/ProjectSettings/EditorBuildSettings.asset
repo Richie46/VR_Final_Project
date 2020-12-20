@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalProjectScene_RDell_DTocarchick.unity
     guid: 2a491e804cb99a042b9a8f835c35365d
+  - enabled: 1
+    path: Assets/Scenes/EndgameScene.unity
+    guid: 229b42dcf398df84ebabab0e1f13bb59
   m_configObjects: {}
