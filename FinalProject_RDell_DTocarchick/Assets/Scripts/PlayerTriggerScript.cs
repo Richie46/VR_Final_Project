@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerTriggerScript : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class PlayerTriggerScript : MonoBehaviour
     public Material material1;
     public GameObject chooseObject;
     public GameObject thisTask;
-    public GameObject Task2;
+    [SerializeField] GameObject Task2;
 
+    [SerializeField] int SceneNum;
 
+    public GameObject soundObject;
 
     void Start()
     {
@@ -24,17 +27,24 @@ public class PlayerTriggerScript : MonoBehaviour
         {
             paper.GetComponent<MeshRenderer>().material = material1;
             paper2.GetComponent<MeshRenderer>().material = material1;
-            Debug.Log("Task Completed");
+            Debug.Log("Player Entered");
             thisTask.SetActive(false);
             Task2.SetActive(true);
+
+            SceneManager.LoadScene(SceneNum);
+            soundObject.GetComponent<AudioSource>().Play();
+
         }
         else
         {
             paper.GetComponent<MeshRenderer>().material = material1;
             paper2.GetComponent<MeshRenderer>().material = material1;
-            Debug.Log("Task Completed");
+            Debug.Log("PlayerEneterereerasdaf");
             thisTask.SetActive(false);
             Task2.SetActive(true);
+
+            SceneManager.LoadScene(SceneNum,LoadSceneMode.Single);
+            soundObject.GetComponent<AudioSource>().Play();
         }
     }
 }

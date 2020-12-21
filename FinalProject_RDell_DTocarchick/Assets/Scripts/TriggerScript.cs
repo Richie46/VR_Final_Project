@@ -14,7 +14,7 @@ public class TriggerScript : MonoBehaviour
     public GameObject thisTask;
     public GameObject Task2;
 
-    public GameObject soundObject;
+    [SerializeField] GameObject soundObject;
 
 
     void Start()
@@ -35,7 +35,7 @@ public class TriggerScript : MonoBehaviour
         if(col.gameObject != chooseObject)
         {
 
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2,LoadSceneMode.Single);
             soundObject.GetComponent<AudioSource>().Play();
         }
     }
